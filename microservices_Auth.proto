@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package AuthCore;
+
+import "google/protobuf/empty.proto";
+
+
+
+service AccessControl {
+    rpc List(UserListRequest) returns (stream Access) {}
+    rpc Retrieve(UserRetrieveRequest) returns (Access) {}
+}
+
+message Access {
+    int32 id = 1;
+    string username = 2;
+    string email = 3;
+}
+
+message UserListRequest {
+}
+
+message UserRetrieveRequest {
+    int32 id = 1;
+}
