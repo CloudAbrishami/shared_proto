@@ -5,3 +5,7 @@ This project describes all the APIs which restaurant (as a whole) exposes to the
 
 + python
 + pip
+
+## to Generate gRPC code
+
+make all
