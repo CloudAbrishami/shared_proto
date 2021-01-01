@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package AuthCoreProto;
 
+import "google/protobuf/empty.proto";
+
 service AccessControl {
     rpc Retrieve(AccessRequest) returns (AccessRespose) {}
 }
@@ -17,5 +19,6 @@ message AccessRespose {
     bool list = 2;
     bool create = 3;
     bool update = 4;
-    bool delete = 5; 
+    bool delete = 5;
+    int32 user_id=100;
 }
